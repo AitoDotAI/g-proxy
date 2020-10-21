@@ -59,6 +59,7 @@ function createApp() {
     secret: config.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
+    cookie: { secure: true },
   }))
   app.use(passport.initialize())
   app.use(passport.session())
